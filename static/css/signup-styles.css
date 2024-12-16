@@ -1,0 +1,120 @@
+/* General Reset */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url('../img/sign-up.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+  /* Sign-Up Container */ 
+  .signup-container {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     background-color: rgba(255, 255, 255, 0.4); 
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+  }
+  
+  .form-header {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  
+  .form-header h1 {
+    font-size: 1.8rem;
+    color: #007bff;
+  }
+  
+  .form-header p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Form Styling */ 
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Button Styling */ 
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Sign-In Link */ 
+  .signin-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .signin-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signin-link a:hover {
+    text-decoration: underline;
+  }
+  

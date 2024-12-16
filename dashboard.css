@@ -1,0 +1,80 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            overflow-x: hidden;
+        }
+        .sidebar {
+            background-color: #2c3e50;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-item{
+            margin-bottom: 20px;
+        }
+
+        .nav-item i{
+            width: 30px;
+            height: 10px;
+        }
+
+        .nav-item span{
+            font-size: 20px;
+        }
+
+        .sidebar.collapsed {
+            width: 70px;
+        }
+        .sidebar .nav-link {
+            color: #fff;
+            font-size: 16px;
+            padding: 15px 20px;
+            white-space: nowrap;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #34495e;
+            text-decoration: none;
+        }
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+        .sidebar.collapsed .nav-link span {
+            display: none;
+        }
+        .content {
+            margin-left: 260px;
+            transition: margin-left 0.3s ease;
+        }
+        .content.collapsed {
+            margin-left: 80px;
+        }
+        .navbar {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        .navbar .navbar-brand {
+            color: #fff;
+        }
+        .navbar .navbar-brand:hover {
+            color: #f4f7fc;
+        }
+        .dashboard-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .dashboard-card h3 {
+            margin-bottom: 20px;
+        }
+        .card-icon {
+            font-size: 3em;
+        }
+        .chart-container {
+            margin-top: 30px;
+        }
