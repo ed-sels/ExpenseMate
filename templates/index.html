@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExpenseMate</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='img/header-logo.png') }}" type="logo">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo"><img src="{{ url_for('static', filename='img/classic logo.png') }}" alt="ExpenseMate logo"></div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#aboutus">About Us</a>
+        <a href="/signin">Login</a>
+        <a href="/signup" class="btn-primary">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Take Control of Your Financial Future</h1>
+        <p>Track your expenses, plan your budgets, and achieve financial freedom with ExpenseMate.</p>
+        <div class="hero-buttons">
+          <a href="/signup" class="btn-primary">Get Started Free</a>
+          <a href="#features" class="btn-secondary">Explore Features</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="{{ url_for('static', filename='img/homedash.webp') }}" alt="Finance Dashboard">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Why Choose ExpenseMate?</h2>
+      <div class="features-grid">
+        <div class="feature">
+            <i class="fa-solid fa-chart-line"></i>
+          <h3>Smart Tracking</h3>
+          <p>Easily track income and expenses with categorized insights.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-money-bill-1-wave"></i>
+          <h3>Budget Planning</h3>
+          <p>Create custom budgets and stay on top of your goals.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-comments"></i>
+          <h3>Detailed Reports</h3>
+          <p>Generate comprehensive financial summaries and trends.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-database"></i>
+          <h3>Secure Data</h3>
+          <p>Your financial data is protected with top-notch security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 ExpenseMate. All Rights Reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

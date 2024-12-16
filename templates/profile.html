@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+</head>
+<body class="light-mode">
+  <header class="profile-header">
+    <div class="container">
+      <h1>User Profile</h1>
+    </div>
+  </header>
+
+  <main class="profile-main">
+    <div class="container">
+      <section class="user-info">
+        <div class="avatar-container">
+          <img id="avatar" src="default-avatar.jpg" alt="User Avatar" class="avatar">
+          <div class="avatar-actions">
+            <input type="file" id="upload-avatar" accept="image/*" hidden>
+            <button id="upload-btn">Upload Picture</button>
+            <button id="remove-btn">Remove Picture</button>
+          </div>
+        </div>
+        <div class="user-details">
+          <h2>John Doe</h2>
+          <p>Email: johndoe@example.com</p>
+          <p>Location: New York, USA</p>
+        </div>
+      </section>
+
+      <section class="user-stats">
+        <h2>Personal Information</h2>
+        <div class="stat-card">
+          <h3>Date of Birth</h3>
+          <p>25/02/1998</p>
+        </div>
+        <div class="stat-card">
+          <h3>Highest Score</h3>
+          <p>95%</p>
+        </div>
+        <div class="stat-card">
+          <h3>Average Score</h3>
+          <p>85%</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="profile-footer">
+    <div class="container">
+      <p>&copy; 2024 ExpenseMate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Light & Dark Mode */
+  body.light-mode {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #f9f9f9;
+  }
+  
+  .dark-mode .stat-card {
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+  }
+  
+  .dark-mode .user-info {
+    background-color: #1f1f1f;
+  }
+  
+  .dark-mode .user-info h2,
+  .dark-mode .user-info p {
+    color: #f9f9f9;
+  }
+  
+  /* Header */
+  .profile-header {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  #theme-toggle {
+    background-color: #fff;
+    color: #6c63ff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #theme-toggle:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* User Info Section */
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .user-info .avatar-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .avatar-container .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #6c63ff;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .avatar-container .avatar:hover {
+    border-color: #564ddb;
+  }
+  
+  .avatar-actions button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .avatar-actions button:hover {
+    background-color: #564ddb;
+  }
+  
+  .avatar-actions input {
+    display: none;
+  }
+  
+  .user-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .user-details p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Stats Section */
+  .user-stats {
+    margin-bottom: 2rem;
+  }
+  
+  .user-stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card {
+    background-color: #fff;
+    color: #333;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .stat-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .dark-mode .stat-card {
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+  }
+  
+  /* Footer */
+  .profile-footer {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  .profile-footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .user-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .user-info .avatar {
+      margin-bottom: 1rem;
+    }
+  
+    .stat-card {
+      padding: 1rem;
+    }
+  }
+  
+  </style>
+  <script>
+    // Select elements
+    const avatar = document.getElementById('avatar');
+    const uploadInput = document.getElementById('upload-avatar');
+    const uploadBtn = document.getElementById('upload-btn');
+    const removeBtn = document.getElementById('remove-btn');
+
+    // Handle Upload Button Click
+    uploadBtn.addEventListener('click', () => {
+      uploadInput.click();
+    });
+
+    // Handle File Input Change
+    uploadInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          avatar.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Handle Remove Button Click
+    removeBtn.addEventListener('click', () => {
+      avatar.src = 'default-avatar.jpg';
+      uploadInput.value = ''; // Clear the input
+    });
+  </script>
+</body>
+</html>
